@@ -1,0 +1,9 @@
+.NavBar{
+    display: flex;
+    justify-content: space-between;
+    /* width: 100%; */
+    margin: 5rem 10rem 5rem 10rem;
+}
+.NavBar h1{
+    font-weight: 700;
+}

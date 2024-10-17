@@ -1,0 +1,233 @@
+.Input_field{
+    margin-bottom: 1rem  ;
+    border: 2px solid #d9d9d9;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 1.5rem;
+    background-color: #fafafa;
+}
+
+.Input_field label{
+    font-weight: 700;
+    align-content: center;
+    font-size: 0.8rem;
+}
+.Input_field input {
+    background-color: black;
+    border-radius: 1rem;
+    color: white;
+    padding: 0.2rem 0.2rem 0.2rem 0.8rem;
+    width: 60%;
+}
+.Input_field textarea{
+    background-color: black;
+    border-radius: 1rem;
+    color: white;
+    padding: 0.2rem 0.2rem 0.2rem 1rem;
+    align-content: center;
+    width: 60%;
+}
+.container {
+    margin: 1rem;
+}
+.texts{
+    margin: 1rem;
+    font-size: 0.6rem;
+}
+.img_conatiner{
+    display: none;
+}
+.img_conatiner2{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    flex-direction: column;
+    filter: grayscale();
+    align-items: center;
+}
+.img_conatiner2 img:last-child{
+    height: 50%;
+    width: 50%;
+   
+}
+.img_conatiner2 img{
+    margin: 1rem;
+    border: 2px solid #d9d9d9;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    background-color: #fafafa;
+
+}
+/* .Input_field input[type='file']{
+    display: none;
+} */
+@media only screen and (min-width:768px){
+    .img_conatiner{
+        display: block;
+        width: 45%;
+        /* height: 100%;  */
+        overflow: hidden;
+    }
+    .img_conatiner2{
+        width: 45%;
+        overflow: hidden;
+    }
+    .img_conatiner img{
+        width: 25rem;
+        height: 25rem;
+        
+        filter: grayscale();
+    }
+    .texts{
+        font-size: 0.8rem;
+        margin: 0rem 2rem 0rem 2rem;
+    }
+    .form{
+        width: 45%;
+    }
+    .container{
+        display: flex;
+        justify-content: space-between;
+        margin: 2rem;
+        
+    }
+    
+}
+@media only  screen and (min-width:1024px){
+    .container{
+        margin: 5rem;
+    }
+    .texts{
+        margin: 0rem 5rem 0rem 5rem;
+        font-size: 1rem;
+    }
+    .Input_field input{
+        font-size:1rem;
+    }
+    .Input_field textarea{
+        font-size:1rem;
+    }
+    .Input_field label{
+        font-size: 1rem;
+    }
+    .Input_field{
+        padding-left: 1rem;
+    }
+    .img_conatiner img{
+        width: 28rem;
+        height: 28rem;
+    }
+}
+@media only screen and (min-width:1440px){
+    .img_conatiner img{
+        width: 30rem;
+        padding: 2rem;
+    }
+    .container{
+        margin: 0rem 10rem 5rem 10rem;
+    }
+    .texts{
+        margin: 0rem 10rem 2rem 10rem;
+    }
+    .Input_field textarea{
+        font-size:1rem;
+        
+    }
+    
+    .form h4{
+        font-size: 1.5rem;
+    }
+    /* .img_conatiner{
+        border: 2px solid yellow;
+    } */
+}
+@media only screen and (min-width:2560px){
+    .texts{
+        font-size: 2rem;
+        margin: 0rem 20rem 4rem 20rem;
+    }
+    .Input_field input{
+        font-size:2rem;
+        border-radius: 2rem;
+        padding: 1rem;
+    }
+    .Input_field textarea{
+        font-size:2rem;
+        border-radius: 2rem;
+    }
+    .Input_field label{
+        font-size: 2rem;
+    }
+    .Input_field{
+        padding: 2rem;
+        border-radius: 4rem;
+    }
+    .img_conatiner img{
+        width: 60rem;
+        padding: 3rem;
+        height: 60rem;
+    }
+    .form h4{
+        font-size: 3rem;
+    }
+    .container{
+        margin: 5rem 20rem 5rem 20rem;
+    }
+}
+
+.Button{
+    display: flex;
+    justify-content: flex-end;
+}
+.Button button{
+    color: white;
+    background-color: black;
+    padding: 0.6rem 0.8rem 0.6rem 0.8rem;
+    border-radius: 1rem;
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+@media only screen and (min-width:1024px) {
+    .Button button{
+        font-size: 1rem;
+    }
+}
+@media only screen and (min-width:2560px){
+    .Button button{
+        font-size: 2rem;
+        padding: 1rem 2rem 1rem 2rem;
+        border-radius: 2rem;
+    }
+    .Button{
+      
+        margin-top: 3rem;
+
+    }
+}
+/* .inputWithValidation {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .inputWithValidation input {
+    width: 100%;
+  }
+  
+  .inputWithValidation span {
+    margin-left: 8px;
+    font-size: 1em;
+    align-items: flex-end;
+  } */
+  
+  .valid {
+    color: green;
+    margin: 0;
+    
+  }
+  
+  .invalid {
+    color: red;
+  }
+  
