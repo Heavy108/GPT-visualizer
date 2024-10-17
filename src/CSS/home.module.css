@@ -2,8 +2,38 @@
     display: flex;
     justify-content: space-between;
     /* width: 100%; */
-    margin: 5rem 10rem 5rem 10rem;
+    /* margin: 4rem 1rem 4rem 15rem; */
+    margin: 2rem;
 }
 .NavBar h1{
     font-weight: 700;
+    /* font-size: 1.5rem; */
+}
+.title{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem;
+}
+.title a{
+    font-weight: 800;
+    font-size: 2rem;
+}
+@media only screen and (min-width:425px){
+.NavBar{
+margin: 2rem 3rem 2rem 3rem;
+}
+}
+@media only screen and (min-width:768px){
+    .NavBar{
+    margin: 2rem 7.5rem 2rem 7.5rem;
+    }
+}
+@media only screen and (min-width:1024px){
+    .NavBar{
+    margin: 4rem 15rem 4rem 15rem;
+    }
+    .NavBar h1{
+        font-size: 1.5rem;
+    }
 }
