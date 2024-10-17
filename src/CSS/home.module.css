@@ -4,6 +4,18 @@
     align-items: center;
     margin: 2rem;
   }
+.PredictedOutput{
+    margin: 2rem;
+    border: 2px solid #d9d9d9;
+    padding: 2rem;
+    text-align: center;
+    background-color: #fafafa;
+    border-radius: 0.5rem;
+
+}
+.chart{
+    margin: 2rem;
+}
   
   .NavBar h1 {
     font-weight: 700;
@@ -24,7 +36,7 @@
   .Parameters {
     display: flex;
     /* justify-content: space-between; */
-    
+    /* overflow: hidden; */
     flex-direction: column;
     /* align-items: center; */
     
@@ -60,12 +72,11 @@
   .ParaComponent {
     display: flex;
     align-items: center;
-    /* justify-content: flex-start; */
-    /* padding: 1.5rem; */
+    
     border-radius: 0.8rem;
-    /* width: 40%; */
-    /* border: 2px solid #c9c9c9; */
+   
     margin: 0rem;
+    padding: 0.5rem;
   }
   
   .ParaComponent input {
@@ -75,7 +86,7 @@
     height: 0.5rem;
     /* width: 150px; */
     border-radius: 5px;
-    margin-right: 10px; /* Added margin to separate the slider and output */
+    /* margin-right: 10px;  */
   }
   
   .ParaComponent input::-webkit-slider-thumb {
@@ -100,7 +111,11 @@
   }
   .inputContainer{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    
+  }
+  .inputContainer textarea{
+    margin: 1rem;
   }
   
   /* Media queries for responsive design */
@@ -108,11 +123,37 @@
     .NavBar {
       margin: 2rem 3rem 2rem 3rem;
     }
+    .inputContainer textarea{
+        margin: 2rem 3rem 2rem 3rem;
+        width: auto;
+      }
+      .PredictedOutput{
+        margin: 2rem 3rem 2rem 3rem;
+    }
+    .chart{
+        margin: 2rem 3rem 2rem 3rem;
+    }
   }
+  
   
   @media only screen and (min-width: 768px) {
     .NavBar {
       margin: 2rem 7.5rem 2rem 7.5rem;
+    }
+    .inputContainer{
+        flex-direction: row;
+        margin: 2rem 4rem 2rem 4rem;
+    }
+    .inputContainer textarea{
+        width: 100%;
+        margin: 0rem ;
+        /* padding: 0rem; */
+    }
+    .PredictedOutput{
+        margin: 2rem 7.5rem 2rem 7.5rem;
+    }
+    .chart{
+        margin: 2rem 7.5rem 2rem 7.5rem;
     }
     
    
@@ -129,7 +170,20 @@
   
     .inputContainer {
       /* justify-content: space-between; */
-      margin: 2rem 15rem;
+      margin: 2rem 10rem ;
     }
+    .PredictedOutput{
+        margin: 4rem 15rem 4rem 15rem;
+    }
+    .chart{
+        margin: 4rem 15rem 4rem 15rem;
+    }
+  }
+  @media only screen and (min-width:1440px){
+    .inputContainer{
+        margin: 2rem 14rem;
+        gap: 4rem;
+    }
+    
   }
   

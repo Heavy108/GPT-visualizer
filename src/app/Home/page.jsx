@@ -10,6 +10,7 @@ import bhavna from "@/Assets/bhavna.gif";
 import Image from "next/image";
 import style from "@/CSS/home.module.css";
 import { Textarea } from "@/components/ui/textarea";
+import { Component } from "@/Component/PredicatedGraph";
 
 function Gpt() {
   // Separate state for Temperature and Max Tokens
@@ -60,7 +61,7 @@ function Gpt() {
         </div>
         {/* Max Tokens Slider */}
         <div className={style.ParaComponent}>
-          <label className={style.label}> Max Tokens </label>
+          <label className={style.label}> Max_Tokens </label>
           <input
             type="range"
             value={maxTokens}
@@ -74,6 +75,13 @@ function Gpt() {
         
       </div>
       <Textarea placeholder="Enter text for Predicting the Next Word"/>
+      </div>
+
+      <div className={style.PredictedOutput}>
+        <h1>Predicted text </h1>
+      </div >
+      <div className={style.chart}>
+    <Component/>
       </div>
     </>
   );
