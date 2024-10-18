@@ -119,6 +119,13 @@
   }
   
   /* Media queries for responsive design */
+
+  @media only screen and (min-width:375px){
+    .inputContainer textarea{
+      margin: 2rem ;
+      width: auto;
+    }
+  }
   @media only screen and (min-width: 425px) {
     .NavBar {
       margin: 2rem 3rem 2rem 3rem;
