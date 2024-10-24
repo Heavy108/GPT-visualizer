@@ -6,44 +6,37 @@ import { Button } from "@/components/ui/button";
 import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from "@/components/ui/command";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 
-export function ComboboxDemo() {
+export function ComboboxDemo({ onSelect }) {  // Accept onSelect as a prop
   const [open, setOpen] = React.useState(false);
   const [value, setValue] = React.useState("");
   const [frameworks, setFrameworks] = React.useState([]);
   const [error, setError] = React.useState(null);
-  
-// console.log(process.env.SERVER_ENDPOINT)
+
   React.useEffect(() => {
     const fetchModels = async () => {
       try {
-        const response = await fetch("http://192.168.87.88:4000/models", {
-          method: 'GET',
-          // mode: 'no-cors', 
+        const response = await fetch("http://127.0.0.1:8000/models", {
+          method: "GET",
           headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json',
-          }
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
         });
-
-       console.log(response)
 
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
 
         const data = await response.json();
-        const formattedModels = data.models.map(model => ({
+        const formattedModels = data.models.map((model) => ({
           value: model,
-          label: model.charAt(0).toUpperCase() + model.slice(1)
+          label: model.charAt(0).toUpperCase() + model.slice(1),
         }));
         setFrameworks(formattedModels);
         setError(null);
       } catch (error) {
-        console.error('Error fetching models:', error);
-        setError('Failed to load languages. Please try again later.');
-        // setFrameworks([
-        //   { value: "asm", label: "Assamese" }
-        // ]);
+        console.error("Error fetching models:", error);
+        setError("Failed to load languages. Please try again later.");
       }
     };
 
@@ -52,11 +45,7 @@ export function ComboboxDemo() {
 
   return (
     <div className="relative">
-      {error && (
-        <div className="text-red-500 text-sm mb-2">
-          {error}
-        </div>
-      )}
+      {error && <div className="text-red-500 text-sm mb-2">{error}</div>}
       <Popover open={open} onOpenChange={setOpen}>
         <PopoverTrigger asChild>
           <Button
@@ -82,8 +71,9 @@ export function ComboboxDemo() {
                     key={framework.value}
                     value={framework.value}
                     onSelect={(currentValue) => {
-                      setValue(currentValue === value ? "" : currentValue);
-                      console.log(currentValue);
+                      const newValue = currentValue === value ? "" : currentValue;
+                      setValue(newValue);
+                      onSelect(newValue); // Call onSelect and pass the selected value
                       setOpen(false);
                     }}
                   >

@@ -13,6 +13,7 @@
     border-radius: 0.5rem;
 
 }
+
 .chart{
     margin: 2rem;
 }
@@ -39,6 +40,7 @@
     /* overflow: hidden; */
     flex-direction: column;
     /* align-items: center; */
+    width :50%
     
   }
   
@@ -114,17 +116,17 @@
     flex-direction: column;
     
   }
-  .inputContainer textarea{
-    margin: 1rem;
+  .predict{
+
   }
   
   /* Media queries for responsive design */
 
   @media only screen and (min-width:375px){
-    .inputContainer textarea{
+    /* .inputContainer textarea{
       margin: 2rem ;
       width: auto;
-    }
+    } */
   }
   @media only screen and (min-width: 425px) {
     .NavBar {
