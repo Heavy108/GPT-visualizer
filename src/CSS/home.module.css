@@ -1,4 +1,4 @@
-.NavBar {
+/* .NavBar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,10 +36,7 @@
   
   .Parameters {
     display: flex;
-    /* justify-content: space-between; */
-    /* overflow: hidden; */
     flex-direction: column;
-    /* align-items: center; */
     width :50%
     
   }
@@ -49,10 +46,10 @@
     color: #fff;
     border-radius: 2px;
     padding: 3px 7px;
-    margin-left: 10px; /* Adjusted margin to avoid overlap */
+    margin-left: 10px; 
     text-align: center;
-    position: relative; /* Relative positioning to contain pseudo-elements */
-    display: inline-block; /* Ensure it behaves like an inline element */
+    position: relative; 
+    display: inline-block; 
   }
   
   .output::before {
@@ -70,7 +67,6 @@
     border-left-color: white;
   }
   
-  /* Adjust spacing and layout for the ParaComponent */
   .ParaComponent {
     display: flex;
     align-items: center;
@@ -86,9 +82,7 @@
     outline: none;
     background: black;
     height: 0.5rem;
-    /* width: 150px; */
     border-radius: 5px;
-    /* margin-right: 10px;  */
   }
   
   .ParaComponent input::-webkit-slider-thumb {
@@ -109,7 +103,6 @@
   .ParaComponent {
     padding: 1.5rem;
     border-radius: 0.8rem;
-    /* width: 40%; */
   }
   .inputContainer{
     display: flex;
@@ -120,13 +113,9 @@
 
   }
   
-  /* Media queries for responsive design */
 
   @media only screen and (min-width:375px){
-    /* .inputContainer textarea{
-      margin: 2rem ;
-      width: auto;
-    } */
+    
   }
   @media only screen and (min-width: 425px) {
     .NavBar {
@@ -156,7 +145,6 @@
     .inputContainer textarea{
         width: 100%;
         margin: 0rem ;
-        /* padding: 0rem; */
     }
     .PredictedOutput{
         margin: 2rem 7.5rem 2rem 7.5rem;
@@ -178,7 +166,6 @@
     }
   
     .inputContainer {
-      /* justify-content: space-between; */
       margin: 2rem 10rem ;
     }
     .PredictedOutput{
@@ -194,5 +181,145 @@
         gap: 4rem;
     }
     
+  }
+   */
+   .output {
+    background: black;
+    color: #fff;
+    border-radius: 2px;
+    padding: 3px 7px;
+    margin-left: 10px; 
+    text-align: center;
+    position: relative; 
+    display: inline-block; 
+  }
+  
+  .output::before {
+    content: '';
+    position: absolute;
+    left: -12px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 0;
+    width: 0;
+    border: solid 6px black;
+    z-index: -1;
+    border-top-color: white;
+    border-bottom-color: white;
+    border-left-color: white;
+  }
+  .title{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .title img{
+    width: 5rem;
+    height: 5rem;
+  }
+  .title a{
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  .NavBar{
+    display: flex;
+    margin: 2rem 0rem 2rem 0rem;
+    justify-content: space-between;
+  }
+  .Parameters{
+    display: flex;
+    flex-direction: column;
+  }
+  .ParaComponent{
+    display: flex;
+    margin: 1rem 0rem;
+    align-items: center;
+  }
+  .ParaComponent input {
+    -webkit-appearance: none;
+    outline: none;
+    background: black;
+    height: 0.5rem;
+    border-radius: 5px;
+    width: 4rem;
+    margin-left: 1rem;
+  }
+  .label{
+    border: 2px solid #c9c9c9;
+    border-radius: 0.5rem;
+    padding: 1rem;
+  }
+  
+  .ParaComponent input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: black;
+  }
+  
+  .predictButton{
+    border: 2px solid black;
+    color: white;
+    background-color: black;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    margin:0.8rem 0rem;
+  }
+  .PredictedOutput{
+    border: 2px solid #c9c9c9;
+    border-radius: 0.5rem;
+    height: 5rem;
+    background-color: #fafafa;
+    text-align: center;
+    align-content: center;
+  }
+  @media only screen and (min-width:375px){
+    .ParaComponent input{
+      width: 90%;
+    }
+    
+    .NavBar h1{
+      text-align: center;
+      align-content: center;
+      
+    }
+  }
+  @media only screen and (min-width:425px){
+    .title a{
+      font-size: 1.5rem;
+    }
+    .NavBar h1{
+      font-weight: 600;
+    }
+  }
+  @media only screen and (min-width:1024px){
+    .Parameters{
+      width: 45%;
+    }
+    .inputContainer{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .predict{
+      width: 45%;
+    }
+    .NavBar h1{
+      font-size: 1.25rem;
+    }
+    .title a{
+      font-size: 2rem;
+    }
+    .predict textarea{
+      font-size: 1.25rem;
+      padding: 0.5rem;
+    }
+    .PredictedOutput{
+      font-size: 1.5rem;
+    }
   }
   

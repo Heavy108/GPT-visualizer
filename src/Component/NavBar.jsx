@@ -36,7 +36,7 @@ export function ComboboxDemo({ onSelect }) {  // Accept onSelect as a prop
         setError(null);
       } catch (error) {
         console.error("Error fetching models:", error);
-        setError("Failed to load languages. Please try again later.");
+        // setError("Failed to load languages. Please try again later.");
       }
     };
 

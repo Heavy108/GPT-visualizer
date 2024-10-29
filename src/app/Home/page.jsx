@@ -63,7 +63,7 @@ function Gpt() {
 
   return (
     <>
-      <div className={style.title}>
+      <center className={style.title}>
         <Image src={bhavna} width={40} height={40} alt="bhavna" />
         <HoverCard>
           <HoverCardTrigger>Next Word Predictor</HoverCardTrigger>
@@ -71,7 +71,7 @@ function Gpt() {
             Bengali Hindi Assamese Virtual Neural Agent
           </HoverCardContent>
         </HoverCard>
-      </div>
+      </center>
       <div className={style.NavBar}>
         <h1>GPT Visualizer</h1>
         <ComboboxDemo onSelect={setSelectedModel} /> {/* Pass setSelectedModel as a prop */}
@@ -91,12 +91,12 @@ function Gpt() {
             <span className={style.output}>{temperature}</span>
           </div>
           <div className={style.ParaComponent}>
-            <label className={style.label}>Max Tokens</label>
+            <label className={style.label}>Max_Tokens</label>
             <input
               type="range"
               value={maxTokens}
               min="15"
-              max="150"
+              max="500"
               step="1"
               onChange={handleMaxTokensChange}
             />
